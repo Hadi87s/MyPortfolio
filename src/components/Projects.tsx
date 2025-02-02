@@ -1,53 +1,59 @@
-
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Github, ExternalLink } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: 'Car Management System',
-    description: 'Enterprise vehicle management solution modeled after Paltel\'s BTL System. Enables managers to coordinate company vehicle access for employees, streamlining transportation logistics for business operations.',
-    tech: ['Java (Maven)', 'Swing GUI', 'PostgreSQL', 'Jasper Reports'],
-    github: 'https://github.com/Hadi87s/Car-Management-System',
+    title: "Car Management System",
+    description:
+      "Enterprise vehicle management solution modeled after Paltel's BTL System. Enables managers to coordinate company vehicle access for employees, streamlining transportation logistics for business operations.",
+    tech: ["Java (Maven)", "Swing GUI", "PostgreSQL", "Jasper Reports"],
+    github: "https://github.com/Hadi87s/Car-Management-System",
   },
   {
-    title: 'AI Classification Website',
-    description: 'A binary/multi-class classification tool covering perceptron and neural network concepts.',
-    tech: ['AI', 'Neural Networks', 'Web Development'],
-    github: 'https://github.com/Hadi87s/Binary-Multi-Class-Classification',
-    website: 'https://hadi87s.github.io/Binary-Multi-Class-Classification/PartOne/'
+    title: "AI Classification Website",
+    description:
+      "A binary/multi-class classification tool covering perceptron and neural network concepts.",
+    tech: ["AI", "Neural Networks", "Web Development"],
+    github: "https://github.com/Hadi87s/Binary-Multi-Class-Classification",
+    website:
+      "https://hadi87s.github.io/Binary-Multi-Class-Classification/PartOne/",
   },
   {
-    title: 'Kohonen-Map Website',
-    description: 'Demonstrates self-organizing maps, built with Bolt.new AI using prompt engineering and bug fixing.',
-    tech: ['AI', 'SOM', 'Web Development'],
-    github: 'https://github.com/Hadi87s/Kohonen-Map',
-    website: 'https://kohonen-map.netlify.app/'
+    title: "Kohonen-Map Website",
+    description:
+      "Demonstrates self-organizing maps, built with Bolt.new AI using prompt engineering and bug fixing.",
+    tech: ["AI", "SOM", "Web Development"],
+    github: "https://github.com/Hadi87s/Kohonen-Map",
+    website: "https://kohonen-map.netlify.app/",
   },
   {
-    title: 'Fuzzy Tip System',
-    description: 'Calculates tip amount based on food and service rating using fuzzy logic.',
-    tech: ['Python', 'Fuzzy Logic', 'AI'],
-    github: 'https://github.com/Hadi87s/Fuzzy-Tip-System'
+    title: "Fuzzy Tip System",
+    description:
+      "Calculates tip amount based on food and service rating using fuzzy logic.",
+    tech: ["Python", "Fuzzy Logic", "AI"],
+    github: "https://github.com/Hadi87s/Fuzzy-Tip-System",
   },
   {
-    title: 'Chatting System',
-    description: 'A networking project demonstrating TCP and UDP protocols.',
-    tech: ['Java', 'Networking', 'TCP/UDP'],
-    github: 'https://github.com/Hadi87s/Chatting-System'
+    title: "Chatting System",
+    description: "A networking project demonstrating TCP and UDP protocols.",
+    tech: ["Java", "Networking", "TCP/UDP"],
+    github: "https://github.com/Hadi87s/Chatting-System",
   },
   {
-    title: 'Sweet Management System',
-    description: 'Created with Java and Cucumber framework, following Agile and TDD practices.',
-    tech: ['Java', 'Cucumber', 'TDD'],
-    github: 'https://github.com/Hadi87s/Sweet-Management-System'
+    title: "Sweet Management System",
+    description:
+      "Created with Java and Cucumber framework, following Agile and TDD practices.",
+    tech: ["Java", "Cucumber", "TDD"],
+    github: "https://github.com/Hadi87s/Sweet-Management-System",
   },
   {
-    title: 'Oxygen Gym',
-    description: 'A GYM Website, its a well designed fully working platform to organize members of the gym under the control of the administrative team.',
-    tech: ['HTML', 'CSS', 'JS','PHP','MySQL','BootStrap'],
-    github: 'https://github.com/Hadi87s/Sweet-Management-System'
-  }
+    title: "Oxygen Gym",
+    description:
+      "A GYM Website, its a well designed fully working platform to organize members of the gym under the control of the administrative team.",
+    tech: ["HTML", "CSS", "JS", "PHP", "MySQL", "BootStrap"],
+    github: "https://github.com/Hadi87s/MyPortfolio",
+  },
 ];
 
 export default function Projects() {
@@ -57,7 +63,7 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects"className="py-20 projects-gradient theme-transition">
+    <section id="projects" className="py-20 projects-gradient theme-transition">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center"
