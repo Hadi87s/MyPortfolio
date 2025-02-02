@@ -41,6 +41,12 @@ const projects = [
     description: 'Created with Java and Cucumber framework, following Agile and TDD practices.',
     tech: ['Java', 'Cucumber', 'TDD'],
     github: 'https://github.com/Hadi87s/Sweet-Management-System'
+  },
+  {
+    title: 'Oxygen Gym',
+    description: 'A GYM Website, its a well designed fully working platform to organize members of the gym under the control of the administrative team.',
+    tech: ['HTML', 'CSS', 'JS','PHP','MySQL','BootStrap'],
+    github: 'https://github.com/Hadi87s/Sweet-Management-System'
   }
 ];
 
