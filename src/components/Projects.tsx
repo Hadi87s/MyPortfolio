@@ -53,6 +53,7 @@ const projects = [
       "A GYM Website, its a well designed fully working platform to organize members of the gym under the control of the administrative team.",
     tech: ["HTML", "CSS", "JS", "PHP", "MySQL", "BootStrap"],
     github: "https://github.com/Hadi87s/MyPortfolio",
+    website: "https://hadi87s.github.io/Oxygen-Gym/",
   },
 ];
 
