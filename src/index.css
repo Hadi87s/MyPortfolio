@@ -1,0 +1,401 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  :root {
+    --color-primary: 255 255 255;
+    /* White */
+    --color-secondary: 36 163 190;
+    /* Light bluish navy */
+    --color-background: 255 255 255;
+    /* White background */
+    --color-text: 17 24 39;
+    /* Navy text */
+    --color-accent: 36 163 190;
+    /* Accent for buttons */
+    --color-gradient-start: 15 2 2;
+    /* Gradient start color */
+    --color-gradient-end: 36 163 190;
+    /* Gradient end color */
+  }
+
+  :root[class~="dark"] {
+    --color-primary: 15 2 2;
+    /* Dark background */
+    --color-secondary: 36 163 190;
+    /* Light bluish navy */
+    --color-background: 0 0 0;
+    /* Dark background */
+    --color-text: 243 244 246;
+    /* Light text */
+    --color-accent: 36 163 190;
+    /* Accent for buttons */
+    --color-gradient-start: 15 2 2;
+    /* Gradient start color */
+    --color-gradient-end: 36 163 190;
+    /* Gradient end color */
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-gradient {
+  background-image: linear-gradient(109.6deg,
+      rgb(var(--color-gradient-start) / 1) 11.2%,
+      rgb(var(--color-gradient-end) / 1) 91.1%);
+}
+
+.blur-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(1.05);
+  }
+}
+
+.theme-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-gradient {
+  background-size: 200% 200%;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-gradient:hover {
+  background-position: right center;
+}
+
+.about-section {
+  background-color: rgb(var(--color-background) / 1);
+  color: rgb(var(--color-text) / 1);
+}
+
+#about {
+  background-color: rgb(var(--color-background) / 1);
+  color: rgb(var(--color-text) / 1);
+}
+
+.contact-section {
+  background-color: rgb(var(--color-background) / 1);
+  color: rgb(var(--color-text) / 1);
+}
+
+:root[class~="dark"] .contact-section {
+  background-color: rgb(var(--color-background) / 1);
+  /* Already dark in dark mode */
+  color: rgb(var(--color-text) / 1);
+  /* Light text */
+}
+
+.projects-gradient {
+  background: linear-gradient(to bottom,
+      rgb(var(--color-gradient-start)) 0%,
+      rgb(var(--color-gradient-end)) 100%);
+}
+
+:root {
+  --color-gradient-start: 240, 248, 255;
+  /* Alice Blue */
+  --color-gradient-end: 70, 130, 180;
+  /* Steel Blue */
+  --color-project-card-light: 255, 255, 255;
+  /* White */
+  --color-project-card-dark: 20, 24, 30;
+  /* Dark Gray */
+  --color-project-title-light: 17, 24, 39;
+  /* Navy */
+  --color-project-title-dark: 243, 244, 246;
+  /* Light Gray */
+  --color-project-text-light: 55, 65, 81;
+  /* Gray */
+  --color-project-text-dark: 203, 213, 224;
+  /* Light Gray */
+}
+
+:root[class~="dark"] {
+  --color-gradient-start: 0, 0, 0;
+  /* Black */
+  --color-gradient-end: 25, 25, 112;
+  /* Midnight Blue */
+  --color-project-card: var(--color-project-card-dark);
+  --color-project-title: var(--color-project-title-dark);
+  --color-project-text: var(--color-project-text-dark);
+}
+
+:root:not(.dark) {
+  --color-project-card: var(--color-project-card-light);
+  --color-project-title: var(--color-project-title-light);
+  --color-project-text: var(--color-project-text-light);
+}
+
+.bg-project-card {
+  background-color: rgb(var(--color-project-card));
+}
+
+.text-project-title {
+  color: rgb(var(--color-project-title));
+}
+
+.text-project-text {
+  color: rgb(var(--color-project-text));
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom,
+      rgb(var(--color-hero-gradient-start)) 0%,
+      rgb(var(--color-hero-gradient-end)) 100%);
+}
+
+:root {
+  --color-hero-gradient-start: 240, 248, 255;
+  /* Alice Blue for light mode */
+  --color-hero-gradient-end: 70, 130, 180;
+  /* Steel Blue for light mode */
+  --color-hero-title-light: 17, 24, 39;
+  /* Navy text */
+  --color-hero-text-light: 55, 65, 81;
+  /* Gray text */
+}
+
+:root[class~="dark"] {
+  --color-hero-gradient-start: 0, 0, 0;
+  /* Black for dark mode */
+  --color-hero-gradient-end: 25, 25, 112;
+  /* Midnight Blue for dark mode */
+  --color-hero-title: var(--color-text-dark);
+  /* Light text */
+  --color-hero-text: var(--color-text-dark);
+  /* Light text */
+}
+
+:root:not(.dark) {
+  --color-hero-gradient-start: 240, 248, 255;
+  /* Alice Blue */
+  --color-hero-gradient-end: 70, 130, 180;
+  /* Steel Blue */
+  --color-hero-title: var(--color-hero-title-light);
+  --color-hero-text: var(--color-hero-text-light);
+}
+
+.text-hero-title {
+  color: rgb(var(--color-hero-title));
+}
+
+.text-hero-text {
+  color: rgb(var(--color-hero-text));
+}
+
+/* General styling for the tech tags */
+.tech-tag {
+  background-color: rgb(var(--color-tech-bg));
+  color: rgb(var(--color-tech-text));
+  border: 1px solid rgb(var(--color-tech-border));
+  padding: 0.3rem 0.75rem;
+  font-size: 0.875rem;
+  /* text-sm */
+  border-radius: 50px;
+  /* rounded-full */
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Default (light theme) styles */
+:root {
+  --color-tech-bg: 240, 248, 255;
+  /* Alice Blue */
+  --color-tech-text: 17, 24, 39;
+  /* Navy */
+  --color-tech-border: 203, 213, 224;
+  /* Light Gray */
+}
+
+/* Dark theme styles */
+:root[class~="dark"] {
+  --color-tech-bg: 28, 36, 50;
+  /* Dark Gray */
+  --color-tech-text: 243, 244, 246;
+  /* Light Gray */
+  --color-tech-border: 55, 65, 81;
+  /* Medium Gray */
+}
+
+/* General styling for the buttons */
+.button-link {
+  color: rgb(var(--color-button-text));
+  background-color: rgb(var(--color-button-bg));
+  border: 1px solid rgb(var(--color-button-border));
+  padding: 0.3rem 1rem;
+  font-size: 0.875rem;
+  /* text-sm */
+  border-radius: 50px;
+  /* rounded-md */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-link:hover {
+  color: rgb(var(--color-button-hover-text));
+  background-color: rgb(var(--color-button-hover-bg));
+  border-color: rgb(var(--color-button-hover-border));
+}
+
+/* Default (light theme) styles */
+:root {
+  --color-button-bg: 240, 248, 255;
+  /* Alice Blue */
+  --color-button-text: 17, 24, 39;
+  /* Navy */
+  --color-button-border: 203, 213, 224;
+  /* Light Gray */
+  --color-button-hover-bg: 70, 130, 180;
+  /* Steel Blue */
+  --color-button-hover-text: 255, 255, 255;
+  /* White */
+  --color-button-hover-border: 70, 130, 180;
+  /* Steel Blue */
+}
+
+/* Dark theme styles */
+:root[class~="dark"] {
+  --color-button-bg: 28, 36, 50;
+  /* Dark Gray */
+  --color-button-text: 243, 244, 246;
+  /* Light Gray */
+  --color-button-border: 55, 65, 81;
+  /* Medium Gray */
+  --color-button-hover-bg: 36, 163, 190;
+  /* Light Blue */
+  --color-button-hover-text: 243, 244, 246;
+  /* Light Gray */
+  --color-button-hover-border: 36, 163, 190;
+  /* Light Blue */
+}
+
+/* General styling for the contact links */
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(var(--color-contact-text));
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link:hover {
+  color: rgb(var(--color-contact-hover-text));
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+/* Default (light theme) styles */
+:root {
+  --color-contact-text: 17, 24, 39;
+  /* Navy */
+  --color-contact-hover-text: 70, 130, 180;
+  /* Steel Blue */
+}
+
+/* Dark theme styles */
+:root[class~="dark"] {
+  --color-contact-text: 243, 244, 246;
+  /* Light Gray */
+  --color-contact-hover-text: 36, 163, 190;
+  /* Light Blue */
+}
+
+/* Styling for the "View Resume" button */
+.hero-resume-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(var(--color-button-text));
+  background: linear-gradient(to right, rgb(var(--color-button-bg-start)), rgb(var(--color-button-bg-end)));
+  border: none;
+  border-radius: 0.375rem;
+  /* rounded-md */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background-position 0.4s ease, color 0.3s ease;
+  background-size: 200% 100%;
+  /* Prepare for gradient animation */
+  background-position: 0% 0%;
+}
+
+.hero-resume-button:hover {
+  background-position: 100% 0%;
+  /* Slide the gradient */
+  color: rgb(var(--color-button-hover-text));
+}
+
+/* Default (light theme) styles */
+:root {
+  --color-button-text: 17, 24, 39;
+  /* Navy */
+  --color-button-hover-text: 255, 255, 255;
+  /* White */
+  --color-button-bg-start: 30, 60, 90;
+  /* Darker Steel Blue */
+  --color-button-bg-end: 20, 50, 80;
+  /* Deep Blue */
+}
+
+/* Dark theme styles */
+:root[class~="dark"] {
+  --color-button-text: 243, 244, 246;
+  /* Light Gray */
+  --color-button-hover-text: 243, 244, 246;
+  /* Light Gray */
+  --color-button-bg-start: 10, 20, 40;
+  /* Very Dark Blue */
+  --color-button-bg-end: 15, 30, 50;
+  /* Deep Darker Blue */
+}
+
+/* Define dynamic text colors for the arrow */
+:root {
+  --color-arrow-light: 17, 24, 39;
+  /* Black */
+  --color-arrow-dark: 243, 244, 246;
+  /* White */
+}
+
+.text-arrow-light {
+  color: rgb(var(--color-arrow-light));
+}
+
+.text-arrow-dark {
+  color: rgb(var(--color-arrow-dark));
+}
