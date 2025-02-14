@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="w-48 h-48 mx-auto relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[rgba(36,163,190,0.5)] to-[rgba(36,163,190,0.8)] animate-pulse opacity-75 blur-lg"></div>
             <img
-              src="../../public/Me.jpg"
+              src="/Me.jpg"
               alt="Hadi Irshaid"
               className="w-48 h-48 rounded-full object-cover relative z-10 ring-4 ring-[rgba(36,163,190,0.6)] ring-offset-4 ring-offset-[rgba(15,2,2,0.8)]"
             />
